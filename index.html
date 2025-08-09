@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Infovis — Visualización de Netflix 2025</title>
+  <title>Mi maratón de Netflix en 2025 — Infovis</title>
   <style>
-    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; margin:0; color:#111}
-    header{padding:2rem 1rem; background:#f6f6f6; border-bottom:1px solid #e5e5e5}
+    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; margin:0; color:#111; background:#fafafa}
+    header{padding:2rem 1rem; background:#fff; border-bottom:1px solid #e5e5e5}
     main{max-width:960px; margin:0 auto; padding:1.25rem}
-    h1{font-size:clamp(1.6rem, 2.5vw, 2.2rem); margin:0 0 .25rem}
+    h1{font-size:clamp(1.8rem, 3vw, 2.4rem); margin:0 0 .25rem}
     p.lead{margin:.25rem 0 0; color:#444}
     figure{margin:2rem 0; padding:1rem; border:1px solid #eee; border-radius:12px; background:#fff}
     img{max-width:100%; height:auto; display:block; margin:0 auto}
@@ -26,9 +26,9 @@
 <body>
   <header>
     <main>
-      <h1>Infovis — Visualización de datos personales</h1>
-      <p class="lead">Exploración de mi actividad de Netflix en 2025.</p>
-      <p class="meta">Prototipo para el 19/08 — 3 visualizaciones integradas.</p>
+      <h1>🍿 Mi maratón de Netflix en 2025</h1>
+      <p class="lead">Datos y gráficos que cuentan mi año frente a la pantalla.</p>
+      <p class="meta">Prototipo para el 19/08 — 4 visualizaciones integradas.</p>
     </main>
   </header>
   <main>
@@ -36,7 +36,7 @@
       <h2 class="q">¿Qué series miré más veces en 2025?</h2>
       <figure>
         <img src="top_series_2025.png" alt="Series más vistas en 2025">
-        <figcaption>Gráfico de conteo por serie (Top 10) a partir del historial de visualización. Fuente: Netflix Viewing Activity.</figcaption>
+        <figcaption>Top 10 por cantidad de visualizaciones. Fuente: Netflix Viewing Activity.</figcaption>
       </figure>
     </section>
 
@@ -52,7 +52,15 @@
       <h2 class="q">¿Qué días de la semana miro más?</h2>
       <figure>
         <img src="weekday_views_2025.png" alt="Visualizaciones por día de la semana en 2025">
-        <figcaption>Conteo por día de la semana (2025). Dataset: <a href="weekday_views_2025.csv" download>weekday_views_2025.csv</a>.</figcaption>
+        <figcaption>Conteo por día (2025). Dataset: <a href="weekday_views_2025.csv" download>weekday_views_2025.csv</a>.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="q">¿Qué géneros prefiero?</h2>
+      <figure>
+        <img src="genre_distribution_2025.png" alt="Distribución de géneros en 2025">
+        <figcaption>Distribución de géneros (Top 30 títulos mapeados). Dataset: <a href="genre_distribution_2025.csv" download>genre_distribution_2025.csv</a>.</figcaption>
       </figure>
     </section>
 
@@ -63,20 +71,14 @@
           <li><a href="NetflixViewingHistory_clean.csv" download>NetflixViewingHistory_clean.csv</a></li>
           <li><a href="monthly_views_2025.csv" download>monthly_views_2025.csv</a></li>
           <li><a href="weekday_views_2025.csv" download>weekday_views_2025.csv</a></li>
+          <li><a href="series_counts_2025.csv" download>series_counts_2025.csv</a></li>
+          <li><a href="genre_distribution_2025.csv" download>genre_distribution_2025.csv</a></li>
         </ul>
       </div>
       <div class="card">
-        <h3>Próximos gráficos</h3>
-        <ul>
-          <li>¿Qué géneros prefiero? (si conseguimos género)</li>
-          <li>Heatmap por hora/día (si hay hora disponible)</li>
-        </ul>
+        <h3>Metodología</h3>
+        <p><b>Breve:</b> Historial descargado desde Netflix → limpieza en Python → agregaciones por serie, mes y día → mapeo de géneros (Top 30) → integración en HTML para GitHub Pages.</p>
       </div>
-    </section>
-
-    <section>
-      <h3>Metodología</h3>
-      <p>Historial → limpieza de CSV → agregaciones por serie, mes y día. Para la versión final, añadiremos 1+ gráficos y una narrativa cohesiva.</p>
     </section>
   </main>
   <footer>
