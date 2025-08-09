@@ -28,7 +28,7 @@
     <main>
       <h1>Infovis — Visualización de datos personales</h1>
       <p class="lead">Exploración de mi actividad de Netflix en 2025.</p>
-      <p class="meta">Prototipo para el 19/08 — 2 visualizaciones integradas.</p>
+      <p class="meta">Prototipo para el 19/08 — 3 visualizaciones integradas.</p>
     </main>
   </header>
   <main>
@@ -48,18 +48,26 @@
       </figure>
     </section>
 
+    <section>
+      <h2 class="q">¿Qué días de la semana miro más?</h2>
+      <figure>
+        <img src="weekday_views_2025.png" alt="Visualizaciones por día de la semana en 2025">
+        <figcaption>Conteo por día de la semana (2025). Dataset: <a href="weekday_views_2025.csv" download>weekday_views_2025.csv</a>.</figcaption>
+      </figure>
+    </section>
+
     <section class="grid">
       <div class="card">
         <h3>Datos</h3>
         <ul>
           <li><a href="NetflixViewingHistory_clean.csv" download>NetflixViewingHistory_clean.csv</a></li>
           <li><a href="monthly_views_2025.csv" download>monthly_views_2025.csv</a></li>
+          <li><a href="weekday_views_2025.csv" download>weekday_views_2025.csv</a></li>
         </ul>
       </div>
       <div class="card">
         <h3>Próximos gráficos</h3>
         <ul>
-          <li>¿Qué días de la semana miro más?</li>
           <li>¿Qué géneros prefiero? (si conseguimos género)</li>
           <li>Heatmap por hora/día (si hay hora disponible)</li>
         </ul>
@@ -68,7 +76,7 @@
 
     <section>
       <h3>Metodología</h3>
-      <p>Descargué el historial desde Netflix → limpié el CSV → conté visualizaciones por serie y por mes (2025). Para la versión final, sumaré 2+ visualizaciones y una narrativa completa.</p>
+      <p>Historial → limpieza de CSV → agregaciones por serie, mes y día. Para la versión final, añadiremos 1+ gráficos y una narrativa cohesiva.</p>
     </section>
   </main>
   <footer>
