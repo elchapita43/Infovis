@@ -28,7 +28,7 @@
     <main>
       <h1>Infovis — Visualización de datos personales</h1>
       <p class="lead">Exploración de mi actividad de Netflix en 2025.</p>
-      <p class="meta">Prototipo para el 19/08 — 1ª visualización integrada.</p>
+      <p class="meta">Prototipo para el 19/08 — 2 visualizaciones integradas.</p>
     </main>
   </header>
   <main>
@@ -36,33 +36,39 @@
       <h2 class="q">¿Qué series miré más veces en 2025?</h2>
       <figure>
         <img src="top_series_2025.png" alt="Series más vistas en 2025">
-        <figcaption>Gráfico de conteo por serie (Top 10) a partir del historial de visualización. Fuente: Exportación oficial de Netflix Viewing Activity.</figcaption>
+        <figcaption>Gráfico de conteo por serie (Top 10) a partir del historial de visualización. Fuente: Netflix Viewing Activity.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="q">¿En qué meses miro más contenido?</h2>
+      <figure>
+        <img src="top_months_2025.png" alt="Visualizaciones por mes en 2025">
+        <figcaption>Total de visualizaciones por mes (2025). Dataset: <a href="monthly_views_2025.csv" download>monthly_views_2025.csv</a>.</figcaption>
       </figure>
     </section>
 
     <section class="grid">
       <div class="card">
         <h3>Datos</h3>
-        <p>Dataset usado en el prototipo:</p>
         <ul>
           <li><a href="NetflixViewingHistory_clean.csv" download>NetflixViewingHistory_clean.csv</a></li>
+          <li><a href="monthly_views_2025.csv" download>monthly_views_2025.csv</a></li>
         </ul>
-        <p class="meta">Columnas: Date, Year, Month, Month_Name, Day, Weekday, Series, Episode, Title.</p>
       </div>
       <div class="card">
         <h3>Próximos gráficos</h3>
         <ul>
-          <li>¿En qué meses miro más contenido?</li>
-          <li>¿Qué géneros prefiero?</li>
           <li>¿Qué días de la semana miro más?</li>
+          <li>¿Qué géneros prefiero? (si conseguimos género)</li>
+          <li>Heatmap por hora/día (si hay hora disponible)</li>
         </ul>
-        <p class="meta">Los integraremos con RAWGraphs / Flourish y los embebemos aquí.</p>
       </div>
     </section>
 
     <section>
       <h3>Metodología</h3>
-      <p>Descargué mi historial desde Netflix &rarr; limpié el CSV (fechas, separación Serie/Episodio) &rarr; conté visualizaciones por serie en 2025. Para la versión final, sumaré 3+ visualizaciones y una narrativa completa.</p>
+      <p>Descargué el historial desde Netflix → limpié el CSV → conté visualizaciones por serie y por mes (2025). Para la versión final, sumaré 2+ visualizaciones y una narrativa completa.</p>
     </section>
   </main>
   <footer>
